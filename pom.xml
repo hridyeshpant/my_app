@@ -18,6 +18,7 @@
 		<id>jdk</id>
 		<activation>
 			<jdk>1.5</jdk>
+			<jdk>1.4</jdk>
 		</activation>
 		
 	</profile>
