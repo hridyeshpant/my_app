@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+
+<title>EWE AWS Instance</title>
+<link rel="stylesheet" type="text/css" href="../css/theme.blue.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.css"  media="screen">
+<link rel="stylesheet" type="text/css" href="../css/style.css" media="screen" />
+<style>
+.scroll{
+    height:330px;
+  width:100%;
+  
+  overflow:auto;
+}
+</style>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/subnet.js"></script>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/jquery.tablesorter.js"></script>
+<script src="../js/jquery.tablesorter.widgets.js"></script>
+</head>
+
+<body>
+<div class="container-fluid">
+  <div class="masthead">
+    <h3 class="muted">EWE AWS Resource Query System</h3>
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <ul class="nav">
+            <li ><a href="../home.html">Home</a></li>
+            <li><a href="cloudformation.html">CloudFormation Stack</a></li>
+            <li ><a href="loadBalancer.html">LoadBalancer</a></li>
+            <li class="active"><a href="subnet.html">Subnet IP</a></li>
+            <li><a href="instance.html">Instance</a></li>
+            <li><a href="bucket.html">S3 Bucket</a></li>
+            <li><a href="autoscaling.html">AutoScaling Group</a></li>
+            <li><a href="securityGroup.html">Security Group</a></li>
+
+          </ul>
+        </div>
+      </div>
+    </div><!-- /.navbar -->
+  </div>
+</div>
+
+<center>
+
+<div class="accordion" id="accordion2">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      
+    </div>
+
+    <div id="collapseOne" class="accordion-body collapse ">
+      <div class="accordion-inner" style="width:850px;background:#40464b;border-radius:6px;padding:10px;">
+        <input  type="radio" value='period' name='date' id='date1' checked>
+        <label for='date1'><span></span></label>
+        <label style="color:white">From: </label><input style='width:100px' id='since' type='text' placeholder='2013/7/8 9:32'> 
+        <label style="color:white">To: </label><input style='width:100px' id='until' type='text'placeholder='2013/7/8 15:32'>
+         &nbsp;&nbsp;
+        <input  type="radio" value='exact' name='date' id='date2'>
+        <label for='date2'><span></span></label>
+        <label style="color:white">At:</label> <input style='width:100px' id='at' type='text' placeholder='2013/7/8 9:32'> 
+
+        
+
+        <table align='center' cellpadding="5" style='margin:10px'> 
+          
+          <tr>
+            <td colspan=8 align="center"> <button class='btn btn-info' onclick="searchInstance()"> Submit </button> </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<lable id='instanceNum' class='pull-right' style="margin-right:50px"></lable><br>
+<div id='result' style="margin:0px 10px 0px 10px;"> </div>
+</center>
+
+<script type="text/javascript">searchInstance()</script>
+
+</body>
+</html>
